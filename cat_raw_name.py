@@ -10,7 +10,7 @@ dstfile = 'name.txt'
 def catname():
     fp = open(dstfile,mode='w')
     file = os.listdir(targetPath)
-    file.sort(key=lambda x: int((x[:-4].split('_')[-1])[2:]))  # cut suffix, 以 _ 分割文件名，去最后一个str，并cut前两个字符
+    file.sort(key=lambda x: int((x[:-4].split('_')[-1])[2:]))  # cut suffix, 以 _ 分割文件名，取最后一个str，并cut前两个字符, aa_bb_cc_dd_ee0.bmp
     for f in file:
         f_lower = f.lower()  # 忽略后缀大小写
         if f_lower.endswith(suffix):
